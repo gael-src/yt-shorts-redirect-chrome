@@ -4,22 +4,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const activationToggle = document.getElementById("activationToggle");
   const statusMessage = document.getElementById("statusMessage");
 
-  // Get the current activation status from storage
-  chrome.storage.sync.get(["isActive"], ({ isActive }) => {
-    // Update the status display based on the current status or default to true
-    updateStatus(isActive !== undefined ? isActive : true);
+  // Initialize the extension status by getting it from storage
+  // If the status is not set in storage, default to true (activated)
+  chrome.storage.sync.get({ isActive: true }, ({ isActive }) => {
+    // Update the status display based on the current status
+    updateStatus(isActive);
   });
 
   // Add an event listener for the button click
   activationToggle.addEventListener("click", () => {
     // Get the current activation status from storage
-    chrome.storage.sync.get(["isActive"], ({ isActive }) => {
+    chrome.storage.sync.get({ isActive: true }, ({ isActive }) => {
       // Toggle the activation status
       const newStatus = !isActive;
       // Save the new status to storage
-      chrome.storage.sync.set({ isActive: newStatus });
-      // Update the status display based on the new status
-      updateStatus(newStatus);
+      chrome.storage.sync.set({ isActive: newStatus }, () => {
+        // Update the status display based on the new status
+        updateStatus(newStatus);
+      });
     });
   });
 
