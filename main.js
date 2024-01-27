@@ -16,6 +16,9 @@ const redirectIfShortsUrl = () => {
     // Set the flag to true to indicate that redirection has been done
     redirectionDone = true;
 
+    // Disconnect the observer to prevent further observations
+    observer.disconnect();
+
     window.location.href = newUrl;
   }
 };
