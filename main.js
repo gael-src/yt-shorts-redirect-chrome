@@ -1,4 +1,4 @@
-// content.js
+// main.js
 
 const redirectIfShortsUrl = () => {
   const currentUrl = window.location.href;
