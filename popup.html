@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube Shorts Redirect</title>
-    <link rel="stylesheet" href="./popup.css" />
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <h1>YouTube Shorts Redirect</h1>
@@ -12,11 +12,9 @@
       This extension automatically redirects YouTube Shorts URLs to Watch URLs.
     </p>
 
-    <label>
-      <input type="checkbox" id="activationToggle" checked />
-      Activate/Deactivate
-    </label>
+    <button id="activationToggle">Toggle Activation</button>
+    <p id="statusMessage"></p>
 
-    <script src="./popup.js"></script>
+    <script type="module" src="popup.js"></script>
   </body>
 </html>
