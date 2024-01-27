@@ -1,7 +1,8 @@
 {
-  "name": "Your Extension",
+  "name": "YouTube Shorts Redirect",
   "version": "1.0",
   "manifest_version": 3,
+  "description": "Automatically redirects YouTube Shorts URLs to Watch URLs.",
   "permissions": ["webNavigation", "storage"],
   "background": {
     "service_worker": "background.js"
