@@ -1,5 +1,6 @@
 // main.js
 
+// Function to redirect if the URL contains "/shorts/"
 const redirectIfShortsUrl = () => {
   const currentUrl = window.location.href;
 
@@ -11,8 +12,19 @@ const redirectIfShortsUrl = () => {
   }
 };
 
+// Function to handle changes in the DOM
+const handleDomChanges = () => {
+  // Get the activation status from storage
+  chrome.storage.sync.get({ isActive: true }, ({ isActive }) => {
+    // If active, redirect if the URL contains "/shorts/"
+    if (isActive) {
+      redirectIfShortsUrl();
+    }
+  });
+};
+
 // Create a MutationObserver to watch for changes in the DOM
-const observer = new MutationObserver(redirectIfShortsUrl);
+const observer = new MutationObserver(handleDomChanges);
 
 // Define the configuration for the observer
 const observerConfig = {
@@ -24,4 +36,4 @@ const observerConfig = {
 observer.observe(document.body, observerConfig);
 
 // Execute the redirection function on page load
-redirectIfShortsUrl();
+handleDomChanges();
