@@ -2,17 +2,3 @@ body {
   width: 200px;
   padding: 10px;
 }
-
-button {
-  display: block;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.green {
-  color: green;
-}
-
-.red {
-  color: red;
-}
