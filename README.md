@@ -1,6 +1,6 @@
-# youtube-shorts-url-remover
+# youtube-shorts-redirect
 
-YouTube Shorts URL Remover
+YouTube Shorts Redirect
 
 ---
 
