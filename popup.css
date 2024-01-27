@@ -1,0 +1,9 @@
+body {
+  width: 200px;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
