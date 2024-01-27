@@ -1,10 +1,21 @@
+let redirectionDone = false;
+
 const redirectIfShortsUrl = () => {
+  // Check if redirection has already been done
+  if (redirectionDone) {
+    return;
+  }
+
   const currentUrl = window.location.href;
 
   // Check if the URL contains "/shorts/"
   if (currentUrl.includes("/shorts/")) {
     // Redirect to "/watch/" by replacing "/shorts/" with "/watch/"
     const newUrl = currentUrl.replace("/shorts/", "/watch/");
+
+    // Set the flag to true to indicate that redirection has been done
+    redirectionDone = true;
+
     window.location.href = newUrl;
   }
 };
