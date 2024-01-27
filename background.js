@@ -1,28 +1,29 @@
 // background.js
 
+// Variable to store the activation status
 let isActive = true;
 
+// Function to update the activation status based on storage
 const updateActivationStatus = () => {
   chrome.storage.sync.get(
     { isActive: true },
     ({ isActive: storedIsActive }) => {
-      const newStatus = storedIsActive;
-
-      if (isActive !== newStatus) {
-        // Do something with the updated activation status
-        isActive = newStatus;
+      // Check if there is a change in activation status
+      if (isActive !== storedIsActive) {
+        // Update the activation status
+        isActive = storedIsActive;
       }
     }
   );
 };
 
-// Initial setup
+// Initial setup to get the activation status
 updateActivationStatus();
 
 // Listen for changes in activation status
 chrome.storage.onChanged.addListener(updateActivationStatus);
 
-// Listen for navigation events
+// Listen for navigation events and perform redirection if active
 chrome.webNavigation.onBeforeNavigate.addListener((details) => {
   if (isActive) {
     const url = new URL(details.url);
@@ -31,9 +32,6 @@ chrome.webNavigation.onBeforeNavigate.addListener((details) => {
     if (url.pathname.includes("/shorts/")) {
       // Redirect to "/watch/" by replacing "/shorts/" with "/watch/"
       const newUrl = url.href.replace("/shorts/", "/watch/");
-
-      // Cancel the navigation and redirect
-      chrome.webNavigation.onBeforeNavigate.removeListener();
       chrome.tabs.update(details.tabId, { url: newUrl });
     }
   }

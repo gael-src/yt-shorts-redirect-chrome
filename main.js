@@ -1,5 +1,6 @@
 // main.js
 
+// Function to redirect if the URL contains "/shorts/"
 const redirectIfShortsUrl = (details) => {
   const url = new URL(details.url);
 
@@ -7,29 +8,27 @@ const redirectIfShortsUrl = (details) => {
   if (url.pathname.includes("/shorts/")) {
     // Redirect to "/watch/" by replacing "/shorts/" with "/watch/"
     const newUrl = url.href.replace("/shorts/", "/watch/");
-
-    // Cancel the navigation and redirect
-    chrome.webNavigation.onBeforeNavigate.removeListener(redirectIfShortsUrl);
     chrome.tabs.update(details.tabId, { url: newUrl });
   }
 };
 
+// Function to handle DOM changes and activate/deactivate redirection
 const handleDomChanges = () => {
-  // Check if the extension is active
   chrome.storage.sync.get({ isActive: true }, ({ isActive }) => {
     if (isActive) {
-      redirectIfShortsUrl();
+      // If extension is active, add listener for navigation events
+      chrome.webNavigation.onBeforeNavigate.addListener(redirectIfShortsUrl);
+    } else {
+      // If extension is inactive, remove listener for navigation events
+      chrome.webNavigation.onBeforeNavigate.removeListener(redirectIfShortsUrl);
     }
   });
 };
 
-// Add event listener for navigation events
-chrome.webNavigation.onBeforeNavigate.addListener(redirectIfShortsUrl);
-
 // Create a MutationObserver to watch for changes in the DOM
 const observer = new MutationObserver(handleDomChanges);
 
-// Define the configuration for the observer
+// Configuration for the observer
 const observerConfig = {
   childList: true, // Watch for changes in the child elements of the target
   subtree: true, // Watch for changes in the entire subtree
