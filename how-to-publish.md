@@ -1,3 +1,13 @@
+# Notes
+
+</br>
+
+---
+
+</br>
+
+## How to publish:
+
 1. **Prepare Your Extension:**
 
    - Ensure that your extension files (`manifest.json`, `content.js`, `icon.png`) are ready.
@@ -41,3 +51,32 @@
 Remember to follow the [Chrome Web Store developer program policies](https://developer.chrome.com/docs/webstore/program_policies/) to ensure your extension complies with the guidelines.
 
 Please note that this information is based on the state of things as of my last knowledge update in January 2022, and there might have been changes to the process or policies since then. Always refer to the latest Chrome Web Store documentation for the most accurate and up-to-date information.
+
+</br>
+
+---
+
+</br>
+
+**Load Extension in Chrome:**
+
+Open the Extensions page in Chrome `chrome://extensions/`,
+enable "Developer mode," and click "Load unpacked."
+Select the directory containing your extension files.
+
+</br>
+
+---
+
+</br>
+
+Check later if not working:
+
+- https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onHistoryStateUpdated
+- https://developer.chrome.com/docs/extensions/reference/api/webNavigation#event-onCompleted
+
+</br>
+
+---
+
+</br>
