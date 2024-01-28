@@ -8,7 +8,7 @@ Joking, it's just notes.
 
 </br>
 
-## How to publish:
+## How to publish (Google Chrome):
 
 1. **Prepare Your Extension:**
 
