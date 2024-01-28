@@ -19,3 +19,14 @@ Enjoy seamless navigation between short and regular videos!
 - Open the Extensions page in Chrome `chrome://extensions/`.
 - Enable "Developer mode," and click "Load unpacked."
 - Select the directory containing your extension files.
+
+</br>
+
+---
+
+</br>
+
+- **Code for Chrome Extension:**
+  - https://github.com/gael-src/youtube-shorts-redirect-chrome
+- **Code for Firefox Extension:**
+  - https://github.com/gael-src/youtube-shorts-redirect-firefox
