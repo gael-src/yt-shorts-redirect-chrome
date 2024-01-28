@@ -1,8 +1,8 @@
-# youtube-shorts-redirect
+# youtube-shorts-redirect-chrome
 
 </br>
 
-**YouTube Shorts Redirect**
+**YouTube Shorts redirect Google Chrome extension**
 
 Our extension enhances the user experience on YouTube by automatically redirecting URLs containing `/shorts/` to `/watch/`.
 
