@@ -3,7 +3,6 @@
   "name": "YouTube Shorts Redirect",
   "version": "1.0",
   "description": "Automatically redirects YouTube Shorts URLs to Watch URLs.",
-  "permissions": ["activeTab", "storage"],
   "action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html"
