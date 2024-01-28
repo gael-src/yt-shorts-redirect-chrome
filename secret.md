@@ -1,6 +1,6 @@
 # Secret
 
-Joking, it's just notes.
+Only joking, it's just notes.
 
 </br>
 
