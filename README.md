@@ -37,10 +37,6 @@ Enjoy seamless navigation between short and regular videos!
 
 </br>
 
-- **Install from Chrome Web Store:**
-
-  - https://chromewebstore.google.com/detail/youtube-shorts-redirect/bgdlfcleejgghcjjbpbdfkdhlbkknaal
-
 - **Code for Chrome Extension:**
   - https://github.com/gael-src/youtube-shorts-redirect-chrome
 - **Code for Firefox Extension:**
