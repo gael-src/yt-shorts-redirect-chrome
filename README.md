@@ -38,6 +38,6 @@ Enjoy seamless navigation between short and regular videos!
 </br>
 
 - **Code for Chrome Extension:**
-  - https://github.com/gael-src/youtube-shorts-redirect-chrome
+  - https://github.com/gael-src/yt-shorts-redirect-chrome
 - **Code for Firefox Extension:**
-  - https://github.com/gael-src/youtube-shorts-redirect-firefox
+  - https://github.com/gael-src/yt-shorts-redirect-firefox
