@@ -15,7 +15,7 @@ Enjoy seamless navigation between short and regular videos!
 </br>
 
 - **Install from Chrome Web Store:**
-  - https://chromewebstore.google.com/detail/youtube-shorts-redirect/bgdlfcleejgghcjjbpbdfkdhlbkknaal
+  - https://chromewebstore.google.com/detail/yt-shorts-redirect/bgdlfcleejgghcjjbpbdfkdhlbkknaal
 - **Install from Firefox AddOn Store:**
   - https://addons.mozilla.org/en-US/firefox/addon/yt-shorts-url-redirect/
 
