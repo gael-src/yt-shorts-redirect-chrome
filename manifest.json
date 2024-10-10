@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Shorts Redirect",
+  "name": "YT Shorts Redirect",
   "version": "1.0",
   "description": "Automatically redirects YouTube Shorts URLs to Watch URLs.",
   "action": {

@@ -1,4 +1,4 @@
-# youtube-shorts-redirect-chrome
+# yt-shorts-redirect-chrome
 
 </br>
 
